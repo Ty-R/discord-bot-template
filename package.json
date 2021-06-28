@@ -1,0 +1,26 @@
+{
+  "name": "bot_template",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "bot.js",
+  "author": "Ty",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "knex": "^0.95.6",
+    "sqlite3": "^5.0.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  },
+  "scripts": {
+    "knex": "knex",
+    "migrate": "cross-env NODE_ENV=production knex migrate:latest",
+    "migrate-dev": "cross-env knex migrate:latest",
+    "start": "cross-env NODE_ENV=production node bot",
+    "start-dev": "node bot"
+  }
+}
