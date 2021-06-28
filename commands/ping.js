@@ -14,7 +14,7 @@ module.exports = {
     },
 
     subCommand2: {
-      usage: 'ping subCommand2 [args]',
+      usage: 'ping subCommand2 <args>',
       description: 'Command with basic args.',
       argsPattern: /(?<namedArg>.+)/,
       async execute(args) {
@@ -26,7 +26,7 @@ module.exports = {
     },
 
     subCommand3: {
-      usage: 'ping subCommand3 [arg1] [arg2]',
+      usage: 'ping subCommand3 <arg1> <arg2>',
       description: 'Command with multiple basic args with space separator.',
       argsPattern: /(?<namedArg>[^\s]+)\s(?<namedArg2>[^\s]+)/,
       async execute(args) {
@@ -38,7 +38,7 @@ module.exports = {
     },
 
     subCommand4: {
-      usage: 'ping subCommand4 [arg1] : [arg2] <arg3>',
+      usage: 'ping subCommand4 <arg1> : <arg2> [arg3]',
       description: 'Command with multiple basic args with non-space separator and an optional arguement.',
       argsPattern: /(?<namedArg>.+):\s*(?<namedArg2>[^\s]+)(?=\s*(?<optionalArg>.+)|$)/,
       async execute(args) {
